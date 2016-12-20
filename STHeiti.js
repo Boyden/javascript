@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         华文细黑字体
-// @version      2.0
+// @version      2.1
 // @description  修改默认字体为 STHeiti
 // @author       Boyden
 // @match        *://*/*
@@ -13,5 +13,6 @@
     font.type="text/css";
     font.innerHTML = "*{font-family:STXihei!important}";
     var html = document.getElementsByTagName("head");
-    html[0].appendChild(font);
+    if (html!==null)
+    	html[0].appendChild(font);
 })();
